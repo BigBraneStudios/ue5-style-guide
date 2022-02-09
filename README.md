@@ -1,44 +1,17 @@
-# [Gamemakin](https://gamemak.in) UE4 Style Guide() {
+# [Big Brane Studios](https://www.bigbranestudios.com) UE4 Style Guide() {
 
-*A mostly reasonable approach to Unreal Engine 4*
+*An internal style guide for Unreal Engine 4 at Big Brane Studios*
 
-Heavily inspired by the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript).
+Forked from [Allar's awesome Style Guide](https://github.com/Allar/ue5-style-guide).
 
-[![Analytics](https://ga-beacon.appspot.com/UA-80567399-1/repo?useReferrer)](#)
-
-## Repo Notice
-
-This repo is now located at https://github.com/Allar/ue5-style-guide. The default branch of this repository has been renamed `main`.
-
-## This is currently for UE4. For UE5/v2, see the v2 branch.
-## Linter and Style Guide Documentation
-
-More technical documentation regarding Linter and the Style Guide can be found at our [ReadTheDocs](https://ue4-style-guide.readthedocs.io/en/latest/) page.
-
-## Discuss This Style Guide
-
-Gamemakin LLC has a public Discord channel at http://discord.gamemak.in with a #linter channel if you'd like to discuss all things style guide and Linter plugin.
-
-## Linking To This Document
-
-Every section of this style guide is numbered for both easy reference and easy linking. You can link to any section directly by simply append a hash tag and the section number to the end of http://ue4.style
-For example, if you want to send someone to the first principle of this style guide you would append `#0.1`, resulting in http://ue4.style#0.1.
-
-## Forks And Translations
-
-If you have made a notable fork or translation that is not suitable for a pull request into this repo, please submit a pull request to add the fork or translation here.
-
-* [Korean Translation](https://github.com/ymkim50/ue4-style-guide/blob/master/README_Kor.md) by ymkim50
-* [Russian Translation](https://github.com/CosmoMyzrailGorynych/ue4-style-guide-rus/blob/master/README.md) by CosmoMyzrailGorynych
-* [Japanese Translation](https://github.com/akenatsu/ue4-style-guide/blob/master/README.jp.md) by akenatsu
-* [Chinese Translation](https://github.com/skylens-inc/ue4-style-guide/blob/master/README.md) by Beijing Skylens Tech.
+This document has been heavily edited for our internal purposes only.
 
 ## Important Terminology
 
 <a name="terms-level-map"></a>
 ##### Levels/Maps
 
-The word 'map' generally refers to what the average person calls a 'level' and may be used interchangeably. See this term's history [here](https://en.wikipedia.org/wiki/Level_(video_gaming)).
+The words "level" and "map" may be used interchangeably. See this term's history [here](https://en.wikipedia.org/wiki/Level_(video_gaming)).
 
 ##### Identifiers
 An `Identifier` is anything that resembles or serves as a "name". For example, the name of an asset, or the name of a material later, or a blueprint property, a variable, or a folder name, or for a data table row name, etc...
@@ -46,19 +19,11 @@ An `Identifier` is anything that resembles or serves as a "name". For example, t
 <a name="terms-cases"></a>
 ##### Cases
 
-There are a few different ways you can `CaseWordsWhenNaming`. Here are some common casing types:
+Please use `PascalCase`.
 
 > ###### PascalCase
 >
 > Capitalize every word and remove all spaces, e.g. `DesertEagle`, `StyleGuide`, `ASeriesOfWords`.
-> 
-> ###### camelCase
->
-> The first letter is always lowercase but every following word starts with uppercase, e.g. `desertEagle`, `styleGuide`, `aSeriesOfWords`.
->
-> ###### Snake_case
->
-> Words can arbitrarily start upper or lowercase but words are separated by an underscore, e.g. `desert_Eagle`, `Style_Guide`, `a_Series_of_Words`.
 
 <a name="terms-var-prop"></a>
 ##### Variables / Properties
@@ -80,14 +45,10 @@ When in the context of a class, it is often used to convey discussion about its 
 <a name="0"></a>
 ## 0. Principles
 
-These principles have been adapted from [idomatic.js style guide](https://github.com/rwaldron/idiomatic.js/).
-
 <a name="0.1"></a>
-### 0.1 If your UE4 project already has a style guide, you should follow it.
+### 0.1 Follow this style guide!
 
-If you are working on a project or with a team that has a pre-existing style guide, it should be respected.  Any inconsistency between an existing style guide and this guide should defer to the existing.
-
-Style guides should be living documents. You should propose style guide changes to an existing style guide as well as this guide if you feel the change benefits all usages.
+This style guides is a living document. You should propose style guide changes to this guide if you feel the change is beneficial.
 
 > #### "Arguments over style are pointless. There should be a style guide, and you should follow it."
 > [_Rebecca Murphey_](https://rmurphey.com)
@@ -106,8 +67,6 @@ If you see someone working either against a style guide or no style guide, try t
 
 When working within a team or discussing within a community such as [Unreal Slackers](http://join.unrealslackers.org/), it is far easier to help and to ask for help when people are consistent. Nobody likes to help untangle someone's Blueprint spaghetti or deal with assets that have names they can't understand.
 
-If you are helping someone whose work conforms to a different but consistent and sane style guide, you should be able to adapt to it. If they do not conform to any style guide, please direct them here.
-
 <a name="0.4"></a>
 ### 0.4 A team without a style guide is no team of mine.
 
@@ -116,22 +75,15 @@ When joining an Unreal Engine 4 team, one of your first questions should be "Do 
 <a name="0.5"></a>
 ### 0.5 Don't Break The Law
 
-Gamemakin LLC is not a lawyer, but please don't introduce illegal actions and behavior to a project, including but not limited to:
+Do not introduce illegal actions and behavior to a project, including but not limited to:
 
 * Don't distribute content you don't have the rights to distribute
 * Don't infringe on someone else's copyrighted or trademark material
 * Don't steal content
 * Follow licensing restrictions on content, e.g. attribute when attributions are needed
 
-<a name="00"></a>
-## 00. Globally Enforced Opinions
-
-@TODO: Make this section 1 and update this document accordingly. Or maybe we don't?
-
-<a name="00.1"></a>
-### 00.1 Forbidden Characters
-
-#### Identifiers
+<a name="0.6"></a>
+### 0.6 Forbidden Characters
 
 In any `Identifier` of any kind, **never** use the following unless absolutely forced to:
 
