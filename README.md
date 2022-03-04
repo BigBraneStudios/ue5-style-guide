@@ -265,6 +265,7 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 | Structure               | F or S     |            | No underscore.                   |
 | Tutorial Blueprint      | TBP_       |            |                                  |
 | Widget Blueprint        | WBP_       |            |                                  |
+| [PLUGIN] State Machine | BPSM_  |            | Logic Drive Plugin - State Machine    |
 
 <a name="anc-materials"></a>
 <a name="1.2.5"></a>
